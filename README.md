@@ -7,9 +7,9 @@ Ambas propuestas parten del [Phaser3-Template](https://github.com/UNRaf-PROGRAMA
 
 ## Ejecutar online (GitHub Pages)
 
-- **Página principal (Selector de propuestas):** https://acloshh.github.io/Actividad-1-Phaser-Desarrollo-Tecnol-gico/
-- **Propuesta 1 — Lluvia de Figuras:** https://acloshh.github.io/Actividad-1-Phaser-Desarrollo-Tecnol-gico/Propuesta1/
-- **Propuesta 2 — Laberinto Estelar:** https://acloshh.github.io/Actividad-1-Phaser-Desarrollo-Tecnol-gico/Propuesta2/
+- **Página principal (Selector de propuestas):** https://acloshh.github.io/Actividad-2-Phaser-Desarrollo-Tecnol-gico/
+- **Propuesta 1 — Lluvia de Figuras:** https://acloshh.github.io/Actividad-2-Phaser-Desarrollo-Tecnol-gico/Propuesta1/
+- **Propuesta 2 — Laberinto Estelar:** https://acloshh.github.io/Actividad-2-Phaser-Desarrollo-Tecnol-gico/Propuesta2/
 
 ## Cómo ejecutar localmente
 
