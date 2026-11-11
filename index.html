@@ -1,17 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Phaser 3 Tilemap Template</title>
-
-    <!-- Import Phaser 3 from CDN -->
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
-
-    <!-- Import an run main.js : load the game config and start first scene -->
-    <script type="module" src="./main.js"></script>
+    <meta name="author" content="Santiago Tornau" />
+    <title>Actividad 1 — Phaser 3 | Santiago Tornau</title>
+    <style>
+      :root {
+        --bg: #0b0e17;
+        --card: #151a2b;
+        --card-border: #28314e;
+        --accent-1: #4fc3f7;
+        --accent-2: #00e676;
+        --text: #f3f6ff;
+        --muted: #a9b4d0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+        background: radial-gradient(circle at top, #1b223a 0%, var(--bg) 70%);
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+      }
+      header {
+        text-align: center;
+        max-width: 780px;
+        margin-bottom: 36px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(79, 195, 247, 0.14);
+        border: 1px solid rgba(79, 195, 247, 0.4);
+        color: var(--accent-1);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        letter-spacing: -0.02em;
+      }
+      .author {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+      .author strong {
+        color: #ffeb3b;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        gap: 24px;
+        width: 100%;
+        max-width: 820px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        color: inherit;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent-1);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+      }
+      .card-tag {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent-1);
+        margin-bottom: 6px;
+      }
+      .card.p2 .card-tag {
+        color: var(--accent-2);
+      }
+      .card.p2:hover {
+        border-color: var(--accent-2);
+      }
+      .card h2 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+      }
+      .card p {
+        margin: 0 0 16px;
+        color: var(--muted);
+        line-height: 1.5;
+        font-size: 0.96rem;
+      }
+      .features {
+        margin: 0 0 24px;
+        padding-left: 18px;
+        color: #d6def2;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.98rem;
+        background: var(--accent-1);
+        color: #061018;
+        transition: filter 0.15s ease;
+      }
+      .card.p2 .btn {
+        background: var(--accent-2);
+      }
+      .card:hover .btn {
+        filter: brightness(1.1);
+      }
+      footer {
+        margin-top: 36px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <span class="badge">Desarrollo Tecnológico 2 · Módulo 1</span>
+      <h1>Trabajo Práctico — Phaser 3</h1>
+      <p class="author">Alumno: <strong>Santiago Tornau</strong></p>
+    </header>
+
+    <main class="grid">
+      <a class="card p1" href="./Propuesta1/index.html">
+        <div>
+          <div class="card-tag">Propuesta 1</div>
+          <h2>Lluvia de Figuras</h2>
+          <p>
+            Imágenes, entradas, colisiones, sonidos y escenas con Phaser 3.90.0.
+          </p>
+          <ul class="features">
+            <li>Cuadrados (10 pts), triángulos (15 pts), rombos (20 pts) y bombas (-15 pts)</li>
+            <li>Contador descendente de 40 s y meta de superar 100 puntos</li>
+            <li>Descuento de 5 puntos por cada rebote hasta desaparecer</li>
+            <li>Plataformas adicionales y escena única de fin de juego</li>
+          </ul>
+        </div>
+        <span class="btn">▶ Jugar Propuesta 1</span>
+      </a>
+
+      <a class="card p2" href="./Propuesta2/index.html">
+        <div>
+          <div class="card-tag">Propuesta 2</div>
+          <h2>Laberinto Estelar</h2>
+          <p>
+            Tilemaps en formato Tiled JSON, colisiones por propiedades y cámaras.
+          </p>
+          <ul class="features">
+            <li>3 niveles progresivos transportando puntaje y vidas</li>
+            <li>Portal que se habilita al recolectar al menos 5 gemas</li>
+            <li>Nivel 3 amplio (1952×1280 px) con cámara de seguimiento + minimapa</li>
+            <li>Enemigos con movimiento horizontal o vertical según el pasillo</li>
+          </ul>
+        </div>
+        <span class="btn">▶ Jugar Propuesta 2</span>
+      </a>
+    </main>
+
+    <footer>
+      Phaser 3.90.0 · Santiago Tornau
+    </footer>
+  </body>
 </html>
